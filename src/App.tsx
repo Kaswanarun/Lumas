@@ -20,26 +20,26 @@ const AppTabs = () => {
         <h1 className="text-3xl font-bold tracking-wide">📖 Lumas Village Library</h1>
       </header>
 
-      <nav className="w-full bg-white border-b shadow-sm overflow-x-auto no-scrollbar">
-        <TabsList className="flex w-max px-4 py-3 gap-2">
-          {tabs.map((tab) => (
-            <TabsTrigger key={tab} value={tab} active={activeTab} setActive={setActiveTab}>
-              {tab}
-            </TabsTrigger>
-          ))}
-        </TabsList>
-      </nav>
+      <Tabs defaultValue={activeTab}>
+        <nav className="w-full bg-white border-b shadow-sm overflow-x-auto no-scrollbar">
+          <TabsList className="flex w-max px-4 py-3 gap-2">
+            {tabs.map((tab) => (
+              <TabsTrigger key={tab} value={tab} active={activeTab} setActive={setActiveTab}>
+                {tab}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </nav>
 
-      <main className="flex-1 w-full max-w-screen-md mx-auto px-4 py-6">
-        <Tabs defaultValue={activeTab}>
+        <main className="flex-1 w-full max-w-screen-md mx-auto px-4 py-6">
           <TabsContent value="Home" active={activeTab}><HomePage /></TabsContent>
           <TabsContent value="Books" active={activeTab}><BooksList /></TabsContent>
           <TabsContent value="Podcasts" active={activeTab}><PodcastsPage /></TabsContent>
           <TabsContent value="Videos" active={activeTab}><VideosPage /></TabsContent>
           <TabsContent value="News" active={activeTab}><NewsPage /></TabsContent>
           <TabsContent value="Feedback" active={activeTab}><FeedbackPage /></TabsContent>
-        </Tabs>
-      </main>
+        </main>
+      </Tabs>
 
       <footer className="bg-gray-100 text-center text-sm text-gray-600 py-3 border-t">
         © {new Date().getFullYear()} Lumas Village Library. All rights reserved.

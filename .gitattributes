@@ -11,3 +11,11 @@
 *.json text eol=lf
 *.css text eol=lf
 *.html text eol=lf
+# Auto-convert CRLF to LF on commit
+* text=auto
+
+# Optional: Handle specific file types
+*.ts  text
+*.tsx text
+*.js  text
+*.md  text

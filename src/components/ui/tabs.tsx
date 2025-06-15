@@ -1,5 +1,4 @@
-// src/components/ui/Tabs.tsx
-import { useState, Children, cloneElement } from "react";
+import { useState, cloneElement, Children } from "react";
 
 export function Tabs({ children, defaultValue }: any) {
   const [active, setActive] = useState(defaultValue);
@@ -8,8 +7,8 @@ export function Tabs({ children, defaultValue }: any) {
   );
 }
 
-export function TabsList({ children }: any) {
-  return <div className="flex flex-wrap gap-2">{children}</div>;
+export function TabsList({ children, className = "" }: any) {
+  return <div className={className}>{children}</div>;
 }
 
 export function TabsTrigger({ value, active, setActive, children }: any) {
@@ -17,10 +16,10 @@ export function TabsTrigger({ value, active, setActive, children }: any) {
   return (
     <button
       onClick={() => setActive(value)}
-      className={`rounded px-4 py-2 font-medium border ${
+      className={`rounded-full px-4 py-2 font-medium text-sm whitespace-nowrap transition ${
         isActive
-          ? "bg-blue-600 text-white border-blue-600"
-          : "bg-gray-200 text-gray-700 border-gray-300"
+          ? "bg-blue-600 text-white shadow-md"
+          : "bg-gray-200 text-gray-800 hover:bg-gray-300"
       }`}
     >
       {children}
