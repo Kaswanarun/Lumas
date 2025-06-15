@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+/* Global styles */
+@layer base {
+  /* Set a light background and base text color for the app */
+  body {
+    @apply bg-gray-50 text-gray-800;
+  }
+  /* Remove default anchor underlines and use base text color for links */
+  a {
+    @apply no-underline text-gray-800;
+  }
 }

@@ -1,3 +1,4 @@
+// src/components/ui/Tabs.tsx
 import { useState, Children, cloneElement } from "react";
 
 export function Tabs({ children, defaultValue }: any) {
