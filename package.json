@@ -1,29 +1,21 @@
 {
-  "name": "Lumas",
+  "name": "lumas",
   "version": "1.0.0",
-  "private": true,
-  "description": "Lumas (Village Library) React app with Vite and TailwindCSS",
-  "homepage": "https://<USERNAME>.github.io/<REPO>/",
+  "homepage": "https://kaswanarun.github.io/Lumas",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "start": "vite"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.30.1"
+    "react-router-dom": "^6.17.0"
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.3.3",
-    "@vitejs/plugin-react": "^4.0.0",
-    "autoprefixer": "^10.4.14",
-    "gh-pages": "^5.0.0",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.9"
+    "vite": "^4.5.0",
+    "typescript": "^5.3.3",
+    "@vitejs/plugin-react": "^4.0.3"
   }
 }
